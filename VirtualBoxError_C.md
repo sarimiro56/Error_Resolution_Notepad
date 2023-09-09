@@ -131,6 +131,21 @@ ChatGPT는 저 폴더에 있는 [가상머신명].vbox를 텍스트 편집기(�
 이 곳에서 수정할 파일 경로명은 <!-- <Image uuid="{925ca232-eeaf-4fab-9ce5-9b2865c0b686}" location="C:/Users/&#xD0DC;&#xC740;&#xC120;/Downloads/Fedora-Workstation-Live-x86_64-37-1.7.iso"/> --> 에 있는
 location을 C:\Users\eunseon\Downloads\Fedora-Workstation-Live-x86_64-37-1.7.iso 처럼 현재 사용자 폴더명으로 변경 시키면 실행 된다고 했다.
 그러나 이것 조차도 인식이 안 되었는지 실행이 되지 않아 ChatGPT랑 한참동안 얘기를 하다가...
-
 드디어 방법이 나왔다.
 
+VirtualBox VM 안에 있는 가상머신 파일에서 .vdi라는 파일이 존재할 것이다.
+이는 가상머신의 하드디스크 파일인데, 운영체제와 그 안의 데이터들까지 저장되어있는 파일이라고 볼 수 있다.
+
+이게 멀쩡히 살아있다면 기존의 가상머신은 버리고 새 가상머신에 .vdi 파일을 연결하면 된다.
+
+![image](https://github.com/sarimiro56/Error_Resolution_Notepad/assets/128454837/42b9b218-07fa-4703-bdda-ea9d80535682)
+
+1. 새로운 가상 머신을 만든다.
+
+![image](https://github.com/sarimiro56/Error_Resolution_Notepad/assets/128454837/dd2f0f72-cee7-46c1-8604-d38547b7a91a)
+
+2. 새로 만든 가상머신의 .vdi를 복구하고 싶은 .vdi 파일로 변경하고 실행한다.
+
+![image](https://github.com/sarimiro56/Error_Resolution_Notepad/assets/128454837/987e6bc4-373c-494a-b502-37db5171e387)
+
+로그인, 업데이트, 파일들까지 문제없이 잘 작동된다!
